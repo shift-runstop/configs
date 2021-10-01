@@ -41,6 +41,7 @@ $ sudo apt install vim ; mv vimrc ~/.vimrc
 - curl
 ```sh
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$ sudo apt install zsh-autosuggestions zsh-syntax-highlighting
 $ mv .zshrc ~
 ```
 - wget

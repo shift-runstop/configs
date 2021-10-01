@@ -1,0 +1,42 @@
+*.font: DejaVu Sans Mono:size=09:antialias=true:hinting=true;
+*background: #00001a
+!*background: #000000
+
+emacs*alpha: 85
+*.alpha: 0.75
+
+*.color0:      #242728
+*.color8:      #636667
+
+!! Red
+*.color1:      #ff0090
+*.color9:      #fb58b4
+!
+! Green
+*.color2:      #b6ff00
+*.color10:     #deff8c
+!
+! Yellow
+*.color3:      #fff727
+*.color11:     #ebe087
+!
+! Blue
+*.color4:      #47e0fb
+*.color12:     #7fecff
+!
+! Magenta
+*.color5:      #d731ff
+*.color13:     #e681ff
+!
+! Cyan
+*.color6:      #0effbb
+*.color14:     #69fcd3
+!
+! White
+*.color7:      #e1e1e1
+*.color15:     #f9f9f5
+!
+! Bold, Italic, Underline
+*.colorBD:     #ffffff
+!*.colorIT:
+!*.colorUL:

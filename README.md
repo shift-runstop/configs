@@ -22,8 +22,9 @@ The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
 		- vscode keyring
 		- console kit for void linux
 		- network-manager applet for bar (depends on distro)
-		- dwmbar volume control
-		- .Xresources colours and opacity for st(simple terminal)
+		- dwmbar volume control (suckless.org dwm)
+	* .Xresources
+		- colours and opacity for st (suckless.org simple terminal)
 ## Usage
 Substitue package names and package managers as needed
 These commands are all based around a debian based distro (apt).

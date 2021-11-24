@@ -1,20 +1,22 @@
 {
     "workbench.colorCustomizations": {
         "activityBar.background": "#000000",
-        "activityBar.foreground": "#00FF00",
+        "activityBar.foreground": "#ffffff",
         "statusBar.background": "#000000",
-        "statusBar.foreground": "#00eaff",
+        "statusBar.foreground": "#b1b1b1",
         "statusBarItem.remoteBackground": "#000000",
-        "statusBarItem.remoteForeground": "#00eaff",
+        "statusBarItem.remoteForeground": "#c2c2c2",
         "sideBar.background": "#000000",
-        "editor.background": "#000000",
-
+        "sideBar.foreground": "#ffffff",
+        "sideBar.border": "#000000",
+        "sideBarSectionHeader.background": "#000000"
     },
 
 	"terminal.fontSize": 12,
-    "editor.fontSize": 13,
+    "editor.fontSize": 12,
+    "editor.lineHeight": 14,
     "editor.semanticHighlighting.enabled": false,
-    "workbench.colorTheme": "Just Black",
+    "workbench.colorTheme": "Github Light Theme",
     "glassit.alpha": 180,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -43,5 +45,12 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.defaultLocation": "editor",
     "terminal.integrated.fontSize": 12,
-    "editor.cursorStyle": "underline"
+    "editor.cursorStyle": "underline",
+    "editor.fontLigatures": null,
+    "editor.detectIndentation": false,
+    "json.schemas": [],
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "explorer.confirmDragAndDrop": false
 }

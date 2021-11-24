@@ -1,5 +1,12 @@
 # Config files
 The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
+
+## Screenshots
+
+![Vim and terminal design](imgs/scrn.png)
+
+![VSCode and the obligatory neofetch](scrn2.png)
+
 ## Description
 - i3
 	* main

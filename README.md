@@ -5,7 +5,7 @@ The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
 
 ![Vim and terminal design](imgs/scrn.png)
 
-![VSCode and the obligatory neofetch](scrn2.png)
+![VSCode and the obligatory neofetch](imgs/scrn2.png)
 
 ## Description
 - i3

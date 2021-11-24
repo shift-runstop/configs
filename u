@@ -1,0 +1,49 @@
+#!/bin/sh
+
+#--------------#
+# vpn connect
+#--------------#
+
+#sudo protonvpn c -r
+
+#--------------#
+# package manager
+#--------------#
+
+sudo apt autoclean
+sudo apt clean
+sudo apt update
+sudo apt -y upgrade
+sudo apt -y full-upgrade
+sudo apt -f install
+sudo dpkg --configure -a
+
+searchsploit -u
+
+#--------------#
+# emacs update
+#--------------#
+
+#~/.emacs.d/bin/doom sync
+#~/.emacs.d/bin/doom update
+#~/.emacs.d/bin/doom upgrade
+
+##--------------#
+# update website files
+#--------------#
+
+#scp -r ~/war/website root@shift-runstop.xyz:/var/www/
+
+#--------------#
+# local file lookup table
+#--------------#
+
+sudo updatedb
+
+# Cleanup
+
+sudo apt -y autoremove
+
+
+# inform completion
+notify-send "Upgrade complete"

@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH=/home/shift-runstop/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/shift-runstop/.local/bin:$PATH
+
 #export PATH=/home/shift-runstop/tool/mongodb-linux-x86_64-debian10-4.2.16/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -9,8 +12,10 @@ export ZSH="/home/shift-runstop/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="aussiegeek"
-
+#ZSH_THEME="aussiegeek"
+#ZSH_THEME="blinks"
+ZSH_THEME="jonathan"
+#ZSH_THEME="agnoster"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/

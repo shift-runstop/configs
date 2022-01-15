@@ -8,7 +8,9 @@ exec volumeicon
 new_window pixel0
 exec --no-startup-id unclutter
 set $mod Mod4
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
+
+for_window [class="^.*" instance="^.*"] floating enable
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -19,29 +21,29 @@ floating_modifier $mod
 
 #  ------------set float windows--------------- #
 
-for_window [class="St" instance="st"] floating toggle
-for_window [class="mpv" instance="gl"] floating enable
-for_window [class="Thunar" instance="thunar"] floating enable
-for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-for_window [class="Zathura" instance="zathura"] floating enable
-for_window [class= "Slack" instance="slack"] floating toggle
-for_window [class="discord" instance="discord"] floating enable
-for_window [class="Mousepad" instance="mousepad"] floating enable
-for_window [class="jetbrains-idea" instance="jetbrains-idea"] floating enable
-for_window [class="Nitrogen" instance="nitrogen"] floating enable
-for_window [class="libreoffice-writer" instance="libreoffice"] floating enable
-for_window [class="Brave-browser" instance="brave-browser"] floating enable
-for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
-for_window [class="VirtualBox Manager" instance="VirtualBox Manager"] floating enable
-for_window [class="Code" instance="code"] floating enable
-for_window [class="qbittorrent" instance="qBittorrent"] floating enable
-for_window [class="vmware" instance="Vmware"] floating enable
-for_window [class="VirtualBox Machine" instance="VirtualBox Machine"] floating enable
-for_window [class="feh" instance="feh"] floating enable
-for_window [class="Gimp" instance="gimp"] floating enable
-for_window [class="Conky" instance="Conky"] floating enable
-for_window [class="Doublecmd" instance="doublecmd"] floating enable
-for_window [class="GParted" instance="gpartedbin"] floating enable
+# for_window [class="St" instance="st"] floating toggle
+# for_window [class="mpv" instance="gl"] floating enable
+# for_window [class="Thunar" instance="thunar"] floating enable
+# for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+# for_window [class="Zathura" instance="zathura"] floating enable
+# for_window [class= "Slack" instance="slack"] floating toggle
+# for_window [class="discord" instance="discord"] floating enable
+# for_window [class="Mousepad" instance="mousepad"] floating enable
+# for_window [class="jetbrains-idea" instance="jetbrains-idea"] floating enable
+# for_window [class="Nitrogen" instance="nitrogen"] floating enable
+# for_window [class="libreoffice-writer" instance="libreoffice"] floating enable
+# for_window [class="Brave-browser" instance="brave-browser"] floating enable
+# for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
+# for_window [class="VirtualBox Manager" instance="VirtualBox Manager"] floating enable
+# for_window [class="Code" instance="code"] floating enable
+# for_window [class="qbittorrent" instance="qBittorrent"] floating enable
+# for_window [class="vmware" instance="Vmware"] floating enable
+# for_window [class="VirtualBox Machine" instance="VirtualBox Machine"] floating enable
+# for_window [class="feh" instance="feh"] floating enable
+# for_window [class="Gimp" instance="gimp"] floating enable
+# for_window [class="Conky" instance="Conky"] floating enable
+# for_window [class="Doublecmd" instance="doublecmd"] floating enable
+# for_window [class="GParted" instance="gpartedbin"] floating enable
 
 # Enter || Return
 
@@ -183,8 +185,8 @@ bar {
 
 
 
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $fg i3wm.color7 #d0d0d0
+set_from_resource $bg i3wm.color2 #000000
 
 # class                 border  backgr. text indicator child_border
 

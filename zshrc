@@ -3,11 +3,14 @@
 
 export PATH=/home/shift-runstop/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/shift-runstop/.local/bin:$PATH
 
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
 #export PATH=/home/shift-runstop/tool/mongodb-linux-x86_64-debian10-4.2.16/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/shift-runstop/.oh-my-zsh"
-
+export VISUAL=vim
+export EDITOR=vim
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,3 +112,6 @@ source $ZSH_CUSTOM/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval $(thefuck --alias)
+neofetch --ascii "$(fortune | cowsay -W 30)"

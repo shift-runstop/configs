@@ -35,6 +35,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 call plug#end()
 endif
+
+" CSCOPE
+source ~/.vim/plugged/cscope_maps.vim
+
 "============================================"
 " 				  setters
 "============================================"
@@ -66,9 +70,12 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
 "==========================================="
-"			YouCompleteMe [not working]
+"			YouCompleteMe
 "==========================================="
-""let g:ycm_log_level = 'debug'
+let g:ycm_log_level = 'debug'
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>>'
 "============================================"
 " 			mappings and autocmd's'
 "============================================"

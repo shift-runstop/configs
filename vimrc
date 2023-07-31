@@ -1,122 +1,112 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""                                 ___           ___           __		   |
-""      ___            ___        /  /\         /  /\         /  /\		   |
-""     /  /\          /__/\      /  /::|       /  /::\       /  /::\	   |
-""    /  /:/          \__\:\    /  /:|:|      /  /:/\:\     /  /:/\:\	   |
-""   /  /:/           /  /::\  /  /:/|:|__   /  /::\ \:\   /  /:/  \:\	   |
-""  /__/:/  ___    __/  /:/\/ /__/:/_|::::\ /__/:/\:\_\:\ /__/:/ \  \:\	   |
-""  |  |:| /  /\  /__/\/:/~~  \__\/  /~~/:/ \__\/~|::\/:/ \  \:\  \__\/	   |
-""  |  |:|/  /:/  \  \::/           /  /:/     |  |:|::/   \  \:\		   |
-""  |__|:|__/:/    \  \:\          /  /:/      |  |:|\/     \  \:\		   |
-""   \__\::::/      \__\/         /__/:/       |__|:|~       \  \:\		   |
-""       ~~~~                     \__\/         \__\|         \__\/		   |
-""																		   |
-""																		   |
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"============================================"
-"	 	Manage plugins across boxes
-"============================================"
-if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter *PlugInstall --sync | source $MYVIMRC
-endif
-autocmd VimEnter *
-	\ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-	\| PlugInstall --sync |q
-	\| endif
-silent! if  plug#begin('~/.vim/plugged')
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/fzf'
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'vim-airline/vim-airline'
-Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
-call plug#end()
-endif
+exec xset s off
+exec xset -dpms
+exec --no-startup-id wal -i ~/.config/wal/
+exec --no-startup-id nm-applet
+exec --no-startup-id picom
+exec --no-startup-id blueman-applet
+exec volumeicon
+exec --no-startup-id unclutter
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id setxkbmap eu
 
-" CSCOPE
-source ~/.vim/plugged/cscope_maps.vim
+set $mod Mod4
 
-"============================================"
-" 				  setters
-"============================================"
-"commented but on some set ups
-"filetype on
-"filetype plugin on
-"filetype indent on
-syntax enable
-set number
-set ruler
-set ignorecase
-set hlsearch
-set tabstop=4
-set shiftwidth=4
-set autoindent
-set smartindent
-set cindent
-set wrap
-set visualbell
-set splitbelow splitright
-set noswapfile
-set encoding=utf-8
-set t_Co=256
-set ttyfast
-"============================================"
-" 				Airline Settings
-"============================================"
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline_powerline_fonts=1
-"==========================================="
-"			YouCompleteMe
-"==========================================="
-let g:ycm_log_level = 'debug'
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '>>'
-"============================================"
-" 			mappings and autocmd's'
-"============================================"
-nmap j gj
-nmap k gk
-nmap " :NERDTreeToggle<CR>
-map ; :Files<CR>
-map <F6> :setlocal spell! spelllang=en_us<CR>
-map <F10> :Goyo<CR>
-map t :terminal<CR>
-highlight statement ctermfg=Blue guifg=Blue
-highlight LineNr ctermfg=Green guifg=Green
-autocmd filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-autocmd BufWritePre * %s/\s\+$//e
-nnoremap <Space> <c-w>
-nnoremap <F4> :set relativenumber!<CR>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-"inoremap < <><left>
-autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
-autocmd FileType html inoremap ,it <em></em><Space><++><Esc>FeT>i
-autocmd FileType html inoremap ,1 <h1></h1><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ,2 <h2></h2><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ,3 <h3></h3><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ,p <p></p><Enter><Enter><++><Esc>02kf>a
-autocmd FileType html inoremap ,a <a<Space>href=""><++></a><Space><++><Esc>14hi
-autocmd FileType html inoremap ,e <a<Space>target="_blank"<Space>href=""><++></a><Space><++><Esc>14hi
-autocmd FileType html inoremap ,ul <ul><Enter><li></li><Enter></ul><Enter><Enter><++><Esc>03kf<i
-autocmd FileType html inoremap ,li <Esc>o<li></li><Esc>F>a
-autocmd FileType html inoremap ,ol <ol><Enter><li></li><Enter></ol><Enter><Enter><++><Esc>03kf<i
-autocmd FileType html inoremap ,im <img src="" alt="<++>"><++><esc>Fcf"a
-autocmd FileType html inoremap ,td <td></td><++><Esc>Fdcit
-autocmd FileType html inoremap ,tr <tr></tr><Enter><++><Esc>kf<i
-autocmd FileType html inoremap ,th <th></th><++><Esc>Fhcit
-autocmd FileType html inoremap ,tab <table><Enter></table><Esc>O
-autocmd FileType html inoremap ,gr <font color="green"></font><Esc>F>a
-autocmd FileType html inoremap ,rd <font color="red"></font><Esc>F>a
-autocmd FileType html inoremap ,yl <font color="yellow"></font><Esc>F>a
-autocmd FileType html inoremap ,dt <dt></dt><Enter><dd><++></dd><Enter><++><esc>2kcit
-autocmd FileType html inoremap ,dl <dl><Enter><Enter></dl><enter><enter><++><esc>3kcc
+for_window [class="^.*" instance="^.*"] border pixel 2
+for_window [class="^.*" instance="^.*"] floating enable
+
+font pango:DejaVu Sans Mono 10
+
+floating_modifier $mod
+
+gaps inner 20
+gaps outer 30
+
+bindsym $mod+z		gaps outer current plus 5
+bindsym $mod+Shift+z	gaps outer current minus 5
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec
+bindsym $mod+Shift+l exec --no-startup-id i3lock-fancy -gpf C64_Pro_Mono_STYLE.ttf
+bindsym $mod+m exec wal -i ~/.config/wal/ && pywalfox update && pywal-discord
+bindsym $mod+Shift+m exec wal -li ~/.config/wal/ && pywalfox update && pywal-discord
+bindsym $mod+a exec --no-startup-id alacritty -e pulsemixer
+bindsym $mod+b exec --no-startup-id alacritty -e btm
+bindsym $mod+i exec --no-startup-id alacritty -e ranger
+bindsym $mod+n exec caja
+bindsym $mod+u exec firefox
+bindsym $mod+g exec gimp
+bindsym $mod+t exec ~/war/tool/idea-IU-222.4167.29/bin/idea.sh
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec rofi -show run -theme
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Ctrl+h move left
+bindsym $mod+Ctrl+j move down
+bindsym $mod+Ctrl+k move up
+bindsym $mod+Ctrl+l move right
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+c split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+#bindsym $mod+a focus parent
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exit
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+set_from_resource $fg i3wm.color1 #ff0090
+set_from_resource $bg i3wm.color4 #47e0fb
+
+# class                 border  backgr. text indicator child_border
+
+client.focused          $fg     $bg     $fg  $bg       $fg
+client.focused_inactive $fg     $bg     $fg  $bg       $fg
+client.unfocused        $fg     $bg     $fg  $bg       $fg
+client.urgent           $fg     $bg     $fg  $bg       $fg
+client.placeholder      $fg     $bg     $fg  $bg       $fg
+client.background       $fg
+
+
+#bindsym $mod+m [class="pulse"] scratchpad show; move position center
+#bindsym $mod+i [class="fm"] scratchpad show; move position center
+#exec --no-startup-id st --class fm,fm -e ranger
+#exec --no-startup-id st --class pulse,pulse -e pulsemixer
+#bindsym $mod+a exec ~/war/tool/android-studio-2021.3.1.17-linux/android-studio/bin/studio.sh
+#exec --no-startup-id nitrogen --restore
+#exec --no-startup-id feh --bg-fill --randomize ~/.config/wal/*

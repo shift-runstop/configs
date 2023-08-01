@@ -7,13 +7,19 @@
 - i3
 	* main
 	* i3 blocks
-- vim
-	* goyo (distraction free writing)
-	* fzf (fuzzy finder)
-	* nerdtree (file explorer)
+- vim plugins
+	* goyo
+	* fzf
+	* nerdtree
 	* vim-multiple-cursors
-	* YouCompleteMe (autocompletion for coding)
-	* vim-airline (nice status bar)
+	* YouCompleteMe
+	* vim-airline
+    * go
+    * pywal
+    * rust
+    * asynchronous lint engine
+    * cscope stuff
+    * code-minimap
 
 - ohmyzsh
 	* aussiegeek theme

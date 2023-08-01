@@ -2,12 +2,6 @@
 
 (subject to change. |ʘ‿ʘ)╯)
 
-## Screenshots
-
-![Vim and terminal design](imgs/scrn.png)
-
-![VSCode and the obligatory neofetch](imgs/scrn2.png)
-
 ## Description
 
 - i3

@@ -1,0 +1,8 @@
+settings = {
+  core = { 
+    real_name = "martin";
+    user_name = "martin";
+    nick = "mmcconne";
+  };
+  "fe-common/core" = { theme = "neutral"; };
+};

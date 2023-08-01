@@ -1,0 +1,120 @@
+#------------------------------------------------#
+# ▄▄▄· ▄▄▌   ▄▄▄·  ▄▄· ▄▄▄  ▪  ▄▄▄▄▄▄▄▄▄▄ ▄· ▄▌  #
+# ▐█ ▀█ ██•  ▐█ ▀█ ▐█ ▌▪▀▄ █·██ •██  •██  ▐█▪██▌ #
+# ▄█▀▀█ ██ ▪ ▄█▀▀█ ██ ▄▄▐▀▀▄ ▐█· ▐█.▪ ▐█.▪▐█▌▐█▪ #
+# ▐█▪ ▐▌▐█▌ ▄▐█▪ ▐▌▐███▌▐█•█▌▐█▌ ▐█▌· ▐█▌· ▐█▀·. #
+#  ▀  ▀ .▀▀▀  ▀  ▀ ·▀▀▀ .▀  ▀▀▀▀ ▀▀▀  ▀▀▀   ▀ •  #
+#                                                #
+#                   ^ ランナー▟                  #
+#------------------------------------------------#
+
+window:
+  dimensions:
+    columns: 80
+    lines: 20
+  padding:
+    x: 5
+    y: 5
+  dynamic_padding: true
+  dynamic_title: true
+  decorations: None
+  startup_mode: Windowed
+  opacity: 1
+scrolling:
+  history: 10000
+  multiplier: 3
+font:
+  normal:
+    family: 'DejaVu Sans Mono Nerd Font'
+    style: Regular
+  bold:
+    family: 'DejaVu Sans Mono Nerd Font'
+    style: Regular
+  italic:
+    family: 'DejaVu Sans Mono Nerd Font'
+    style: Regular
+  size: 10.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+draw_bold_text_with_bright_colors: true
+schemes:
+  dark: &dark
+    primary:
+      background: '0x00001a'
+      foreground: '0xFFFFFF'
+    cursor:
+      text: '0xFEFFFF'
+      cursor: '0xc7c7c7'
+    normal:
+      black:   '#161821'
+      red:     '#ff0090'
+      green:   '#b6ff00'
+      yellow:  '#fff727'
+      blue:    '#47e0fb'
+      magenta: '#d731ff'
+      cyan:    '#0effbb'
+      white:   '#b8b8b8'
+    bright:
+      black:   '#6b7089'
+      red:     '#fb58b4'
+      green:   '#deff8c'
+      yellow:  '#ebe087'
+      blue:    '#7fecff'
+      magenta: '#e681ff'
+      cyan:    '#69fcd3'
+      white:   '#c0c0c0'
+# dim:
+      # black:   '0x333366'
+      # red:     '0x6666cc'
+      # green:   '0x0099cc'
+      # yellow:  '0x3366cc'
+      # blue:    '0x006699'
+      # magenta: '0x0066ff'
+      # cyan:    '0x669999'
+      # white:   '0x99cccc'
+colors: *dark
+bell:
+  animation: Linear
+  duration: 0
+  color: '0x320F09'
+
+
+
+#mouse_bindings:
+#- { mouse: Middle, action: None }
+#mouse:
+#double_click: { threshold: 300 }
+#triple_click: { threshold: 300 }
+#hide_when_typing: false
+ # hints:
+    # enabled:
+    # - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+              # [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+      # command: xdg-open
+      # post_processing: true
+      # mouse:
+        # enabled: true
+        # mods: None
+      # binding:
+        # key: U
+        # mods: Control|Shift
+        #selection:
+        #semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+        #save_to_clipboard: false
+        #cursor:
+        #style: Block
+        #unfocused_hollow: true
+        #live_config_reload: true
+        #working_directory: None
+        #enable_experimental_conpty_backend: false
+        #alt_send_esc: true
+        #debug:
+        #render_timer: false
+        #persistent_logging: false
+        #log_level: Warn
+        #print_events: false
+        #ref_test: false

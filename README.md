@@ -1,5 +1,6 @@
-# Config files
-The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
+# files
+
+(subject to change. |ʘ‿ʘ)╯)
 
 ## Screenshots
 
@@ -8,6 +9,7 @@ The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
 ![VSCode and the obligatory neofetch](imgs/scrn2.png)
 
 ## Description
+
 - i3
 	* main
 	* i3 blocks
@@ -18,12 +20,13 @@ The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
 	* vim-multiple-cursors
 	* YouCompleteMe (autocompletion for coding)
 	* vim-airline (nice status bar)
-	* vscode-es7-javascript-react-snippets (snippets for faster web app dev)
+
 - ohmyzsh
 	* aussiegeek theme
 	* autosuggestions
 	* syntax highlighting
 	* colored-man-pages
+
 - xorg
 	* .xinitrc
 		- vscode keyring
@@ -32,26 +35,34 @@ The configuration I use daily. (subject to change. |ʘ‿ʘ)╯)
 		- dwmbar volume control (suckless.org dwm)
 	* .Xresources
 		- colours and opacity for st (suckless.org simple terminal)
+
 ## Usage
+
 Substitue package names and package managers as needed
 These commands are all based around a debian based distro (apt).
+
 ### i3
+
 ```sh
 $ sudo apt install i3 i3blocks ; mv ./i3 ~/.config
 ```
 ### Vim
+
 ```sh
 $ sudo apt install vim ; mv vimrc ~/.vimrc
 ```
 
 ### ohmyzsh
+
 - curl
+
 ```sh
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 $ sudo apt install zsh-autosuggestions zsh-syntax-highlighting
 $ mv .zshrc ~
 ```
 - wget
+
 ```sh
 $ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 $ mv .zshrc ~
